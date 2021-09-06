@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Form Pemesanan Makanan</h2>
+
+        <form action="none" id="formMakanan">
+            <div class="namaPelanggan">
+                <label for="namaPelanggan">Masukkan nama anda</label>
+                <span>:</span>
+                <input type="text" name="nama" id="namaPelanggan">
+            </div>
+
+            <div class="pilihMakanan">
+                <label for="pilihMakanan">Pilih Makanan</label>
+                <span>:</span>
+                <select id="pilihMakanan">
+                    <option selected value="">Pilih Makanan</option>
+                    <option value="kebab">Kebab</option>
+                    <option value="seblak">Seblak</option>
+                    <option value="nasgor">Nasi Goreng</option>
+                    <option value="bakso">Bakso</option>
+                    <option value="martabak">Martabak</option>
+                </select>
+            </div>
+
+            <div class="alamatPelanggan">
+                <label for="alamatPelanggan">Alamat</label>
+                <span>:</span>
+                <input type="text" name="nama" id="alamatPelanggan">
+            </div>
+
+            <div class="jumlahDipesan">
+                <label for="jumlahDipesan">Jumlah Dipesan</label>
+                <span>:</span>
+                <input type="text" name="nama" id="jumlahDipesan">
+            </div>
+
+            <div class="noHp">
+                <label for="noHp">Nomor Hp</label>
+                <span>:</span>
+                <input type="text" name="nama" id="noHp">
+            </div>
+
+            <div class="pembayaran">
+                <label for="pilihPembayaran">Pembayaran</label>
+                <span>:</span>
+                <select id="pilihPembayaran">
+                    <option selected value="">Pilih Pembayaran</option>
+                    <option value="cod">Cash On Delivery</option>
+                    <option value="ovo">Ovo</option>
+                    <option value="dana">Dana</option>
+                    <option value="mandiri">Bank Mandiri</option>
+                </select>
+            </div>
+
+            <div class="catatanTambahan">
+                <label for="catatanTambahan">Catatan Tambahan</label>
+                <span>:</span>
+                <textarea id="catatanTambahan"></textarea>
+            </div>
+
+            <div class="btnSubmit">
+                <input type="submit" name="submit" id="submit" value="Konfirmasi">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
