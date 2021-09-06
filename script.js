@@ -19,14 +19,25 @@ const form = document.getElementById("formMakanan");
 const btnSubmit = form.querySelector("input#submit");
 
 btnSubmit.addEventListener("click", function(e) {
+    let isNumJlh = /^\d+$/.test(form.children[3].lastElementChild.value);
+    let isNumHp = /^\d+$/.test(form.children[4].lastElementChild.value);
+
     for (let i = 0; i < form.childElementCount; i++) {
         if (i == 6) {
             continue;
-        } else if (form.children[i].lastElementChild.value.length < 1) {
+        } else if (form.children[i].lastElementChild.value.length < 1 && i != 3 && i != 4) {
             e.preventDefault();
-            form.children[i].firstElementChild.style.color = "red";
+            form.children[i].lastElementChild.style.backgroundColor = "#ff6161";
+        } else if (i == 3 && isNumJlh == false) {
+            e.preventDefault();
+            form.children[3].lastElementChild.style.backgroundColor = "#ff6161";
+            form.children[3].lastElementChild.setAttribute("placeholder", "Tidak boleh kosong!");
+        } else if (i == 4 && isNumHp == false) {
+            e.preventDefault();
+            form.children[4].lastElementChild.style.backgroundColor = "#ff6161";
+            form.children[4].lastElementChild.setAttribute("placeholder", "Nomor Hp tidak valid.");
         } else {
-            form.children[i].firstElementChild.removeAttribute("style");
+            form.children[i].lastElementChild.removeAttribute("style");
         };
     }
 });
